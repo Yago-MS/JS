@@ -1,13 +1,13 @@
-function camelize(text){
-    let split = text.split("")
-    for (let i = 1; i < text.length; i++) {
-        split[0] = split[0].toLowerCase();
-        if(split[i-1]===" "){
-            split[i] = split[i].toUpperCase();
-            split[i-1] = "";
+function swapcase(text){
+    let split = text.split("");
+    for (let i = 0; i < text.length; i++) {
+        if(split[i]===split[i].toUpperCase()){
+            split[i]= split[i].toLowerCase();
+        }else{
+            split[i]= split[i].toUpperCase();
         }
     }
     return split.join("")
 }
 
-console.log(camelize("Yago morales silva"))
+console.log(swapcase("AaAbBbCcC"))
