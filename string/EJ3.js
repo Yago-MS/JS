@@ -1,4 +1,4 @@
-let str = "Hola";
+let str = "HolaZ";
 let chars = [];
 for (let i = 0; i < str.length; i++) {
 

@@ -1,9 +1,7 @@
 function truncate_string(name, limit){
-    let cut = "";
-    for (let i = 0; i < limit; i++) {
-        cut += name.charAt(i);
-    }
-    return cut;
+    let cut = name.split("");
+    return cut.filter((x,y) => y<limit).join('');
 }
 
-console.log(truncate_string("Yago Morales Silva", 3))
+console.log(truncate_string("Yago Morales Silva", 5))
+
