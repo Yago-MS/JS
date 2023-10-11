@@ -14,4 +14,4 @@ function abbrev_name2(name_surname){
     return nameAbrev;
 }
 console.log(abbrev_name("Yago Morales"));
-console.log(abbrev_name2("Yago Morales Silva"))
+console.log(abbrev_name2("Yago Morales Silva"));
