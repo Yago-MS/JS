@@ -13,5 +13,14 @@ function abbrev_name2(name_surname){
     }
     return nameAbrev;
 }
+
+function abbrev_name3(name_surname){
+    let name = name_surname.split(" ");
+
+    nameAbrev = name.reduce((acc, curr)=> acc +" " + curr.charAt(0).toUpperCase() + ".");
+
+    return nameAbrev;
+}
 console.log(abbrev_name("Yago Morales"));
 console.log(abbrev_name2("Yago Morales Silva"));
+console.log(abbrev_name3("Yago Morales Silva"))
