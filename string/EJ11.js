@@ -18,4 +18,4 @@ function uncamelize(text, separator = " "){
     return split.join("")
 }
 
-console.log(uncamelize("helloWorldPrueba"))
+console.log(uncamelize("helloWorld"))
