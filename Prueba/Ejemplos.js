@@ -66,9 +66,9 @@ console.log("segundo ", plus3Key(1));*/
 
 //ejemplo funcion .map
 let grades = [1,5,3,10];//esto se usara en todos los ejemplos
-/*
+
 console.log(grades.map(g=>g+2));
-console.log(grades);*/
+console.log(grades);
 
 //ejemplo .filter
 // console.log(grades.filter(g => g>2));
@@ -138,9 +138,18 @@ let str3 = str1.split("")
 //let str2 = listUpper.join()
 console.log(str3);*/
 
+/*
 let sumElements = (...arr) =>{
     let sum = arr.reduce((accE, currE) => accE+currE);
     console.log(sum);
 }
 
-sumElements(  );
+sumElements(  );*/
+
+//default parameters
+
+let f = (a)=>{
+    if(a===undefined || a === null){
+
+    }
+}
