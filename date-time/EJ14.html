@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EJ14</title>
+</head>
+<body>
+<!DOCTYPE html>
+<script>
+    function convertMsToHHMMSS(ms){
+        let seconds = Math.floor(ms / 1000)
+        let minutes = Math.floor(seconds / 60)
+        let hours = Math.floor(minutes / 60)
+
+        seconds = seconds % 60
+        minutes = minutes % 60
+        hours = hours % 24
+
+        return `${hours}:${minutes}:${seconds}`
+    }
+
+    function chronometer(nowTime){
+
+        let newTime = new Date(nowTime.getTime() + 1000)
+
+        return convertMsToHHMMSS(nowTime.getTime())
+
+    }
+
+    let date = new Date(0);
+    let start=false;
+    setInterval(() => {
+        if(start===true){
+            let chrono = document.getElementById("chrono");
+            chrono.innerText = chronometer(date);
+            date = new Date(date.getTime() + 1000);
+        }
+    }, 1000);
+</script>
+
+<p id="chrono"></p>
+
+<button onclick="start=true">iniciar</button>
+<button onclick="start=false">parar</button>
+</body>
+</html>

@@ -7,4 +7,5 @@ function comprobarIguales(arr1,arr2){
 
 }
 
+
 console.log(comprobarIguales(array1,array2));

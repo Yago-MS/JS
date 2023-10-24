@@ -22,7 +22,7 @@ function timer(nowTime,hours=0, minutes=0, seconds=0){
 
 const date = new Date();
 setInterval(() => {
-    console.log(timer(date, 0,0,10));
+    console.log(timer(date, 0,0,4));
     setTimeout(() => {
         console.clear();
     }, 1000);
