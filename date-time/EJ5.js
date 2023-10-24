@@ -12,5 +12,4 @@ function currentDayAndTime(){
 
     return weekDay + "Now: " + hour;
 }
-
 console.log(currentDayAndTime())

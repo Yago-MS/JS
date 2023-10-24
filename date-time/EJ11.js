@@ -1,5 +1,5 @@
 function clock(){
-    let date = new Date(Date.now());
+    let date = new Date();
     return date.getHours() +":"+date.getMinutes()+":"+date.getSeconds();
 }
 

@@ -1,12 +1,12 @@
 function MondaysOnSeptember15() {
     const currentYear = new Date().getFullYear();
-    const endYear = 2070;
+    const endYear = 2100;
 
     const yearsWithMondays = [];
 
     for (let year = currentYear; year <= endYear; year++) {
-        const date = new Date(year, 8, 15);
-        if (date.getDay() === 1) {
+        const date = new Date(year, 11, 9);
+        if (date.getDay() === 6) {
             yearsWithMondays.push(year);
         }
     }
