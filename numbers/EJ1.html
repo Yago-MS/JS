@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EJ1</title>
+</head>
+<body>
+<script>
+    let num;
+    do {
+        num = prompt("Insert a valid number");
+    }while(isNaN(num)||num===" ");
+    let showNum = document.getElementById("number");
+    showNum.innerText = num;
+</script>
+<p id ="number"></p>
+</body>
+</html>
