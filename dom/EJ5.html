@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shape Area Calculator</title>
+    <style>
+        .shape-controls {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h2>Choose a Shape:</h2>
+<form id="shape-form">
+    <input type="radio" name="shape" value="square" id="square-radio"> Square
+    <input type="radio" name="shape" value="triangle" id="triangle-radio"> Triangle
+    <input type="radio" name="shape" value="polygon" id="polygon-radio"> Polygon
+    <input type="radio" name="shape" value="circle" id="circle-radio"> Circle
+
+    <div class="shape-controls" id="square-controls">
+        <label for="side-length">Side Length:</label>
+        <input type="number" id="side-length" required>
+    </div>
+
+    <div class="shape-controls" id="triangle-controls">
+        <label for="base">Base:</label>
+        <input type="number" id="base" required>
+        <br>
+        <label for "height">Height:</label>
+        <input type="number" id="height" required>
+    </div>
+
+    <div class="shape-controls" id="polygon-controls">
+        <label for="num-sides">Number of Sides:</label>
+        <input type="number" id="num-sides" required>
+        <br>
+        <label for "side-length-polygon">Side Length:</label>
+        <input type="number" id="side-length-polygon" required>
+    </div>
+
+    <div class="shape-controls" id="circle-controls">
+        <label for="radius">Radius:</label>
+        <input type="number" id="radius" required>
+    </div>
+
+    <button type="button" id="calculate-button">Calculate Area</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+    let shapeForm = document.getElementById("shape-form");
+    let shapeControls = document.querySelectorAll(".shape-controls");
+    let calculateButton = document.getElementById("calculate-button");
+    let resultDiv = document.getElementById("result");
+
+    shapeForm.addEventListener("change", function () {
+        let selectedShape = document.querySelector('input[name="shape"]:checked').value;
+
+        shapeControls.forEach(control => {
+            control.style.display = "none";
+        });
+
+        if (selectedShape) {
+            document.getElementById(`${selectedShape}-controls`).style.display = "block";
+        }
+    });
+
+    calculateButton.addEventListener("click", function () {
+        let selectedShape = document.querySelector('input[name="shape"]:checked').value;
+
+        let area;
+        switch (selectedShape) {
+            case "square":
+                let sideLength = parseFloat(document.getElementById("side-length").value);
+                area = sideLength * sideLength;
+                break;
+            case "triangle":
+                let base = parseFloat(document.getElementById("base").value);
+                let height = parseFloat(document.getElementById("height").value);
+                area = (base * height) / 2;
+                break;
+            case "polygon":
+                let numSides = parseInt(document.getElementById("num-sides").value);
+                let sideLengthPolygon = parseFloat(document.getElementById("side-length-polygon").value);
+                area = (numSides * sideLengthPolygon * sideLengthPolygon) / (4 * Math.tan(Math.PI / numSides));
+                break;
+            case "circle":
+                let radius = parseFloat(document.getElementById("radius").value);
+                area = Math.PI * radius * radius;
+                break;
+        }
+
+        if (!isNaN(area)) {
+            resultDiv.innerHTML = `The area of the ${selectedShape} is: ${area}`;
+        } else {
+            resultDiv.innerHTML = "Please enter valid values for the shape's parameters.";
+        }
+    });
+</script>
+</body>
+</html>

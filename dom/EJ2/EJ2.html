@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EJ2</title>
+    <style>
+        .small-image {
+            width: 20px; /* Cambia el tamaño deseado */
+            height: 20px; /* Cambia el tamaño deseado */
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><a href="presentation.ppt">presentation</a></li>
+    <li><a href="excel.xls">excel</a></li>
+    <li><a href="word.wordp">word</a></li>
+    <li><a href="PDF.pdf">pdf</a></li>
+</ul>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let list = document.getElementsByTagName("li");
+
+        for (let i = 0; i < list.length; i++) {
+            let link = list[i].firstChild;
+            let href = link.href;
+            let imgSrc = "";
+
+            if (href.includes(".ppt")) {
+                imgSrc = "img/p.png";
+            } else if (href.includes(".xls")) {
+                imgSrc = "img/x.png";
+            } else if (href.includes(".wordp")) {
+                imgSrc = "img/w.png";
+            } else if (href.includes(".pdf")) {
+                imgSrc = "img/pdf.png";
+            }
+
+            if (imgSrc) {
+                let img = document.createElement("img");
+                img.src = imgSrc;
+                img.classList.add("small-image")
+                list[i].appendChild(img);
+            }
+        }
+    });
+</script>
+</body>
+</html>

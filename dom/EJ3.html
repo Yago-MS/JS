@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EJ3</title>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function replaceTabooWords(textNode) {
+            const tabooWords = ["sex", "taboo"]; // List of taboo words
+
+            tabooWords.forEach(tabooWord => {
+                const regex = new RegExp("\\b" + tabooWord + "\\b", "gi");
+                if (textNode.textContent.match(regex)) {
+                    const replacementText = textNode.textContent.replace(regex, "<strong>Blocked content</strong>");
+                    const span = document.createElement("span");
+                    span.innerHTML = replacementText;
+                    textNode.parentNode.replaceChild(span, textNode);
+                }
+            });
+        }
+
+        function traverseTextNodes(node) {
+            if (node.nodeType === Node.TEXT_NODE) {
+                replaceTabooWords(node);
+            } else if (node.nodeType === Node.ELEMENT_NODE) {
+                for (let i = 0; i < node.childNodes.length; i++) {
+                    traverseTextNodes(node.childNodes[i]);
+                }
+            }
+        }
+
+        traverseTextNodes(document.body);
+    });
+</script>
+<body>
+
+<p>taboo</p>
+</body>
+</html>
