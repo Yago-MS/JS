@@ -10,6 +10,7 @@
     let books = {
         "books": [
             {
+                id:1,
                 title: "Hero of Ages",
                 genre: "Fantasy",
                 author: "Brandon Sanderson",
@@ -19,6 +20,7 @@
                 website: "https://cosmere.es/el-heroe-de-las-eras/"
             },
             {
+                id:2,
                 title: "Well of Ascension",
                 genre: "Fantasy",
                 author: "Brandon Sanderson",
@@ -33,6 +35,25 @@
     let bookset = books.books;
 
 
+
+
+    function showBooks(){
+        let table = document.getElementById("container");
+        let tableBooks = "";
+        for (let book of bookset) {
+            tableBooks += `<tr data-id="${book.id}"><td>${book.title}</td>`
+            tableBooks += `<td>${book.author}</td>`
+            tableBooks += `<td>${book.genre}</td>`
+            tableBooks += `<td>${book.pages}</td>`
+            tableBooks += `<td>${book.published}</td>`
+            tableBooks += `<td>${book.read}</td>`
+            tableBooks += `<td>${book.website}</td></tr>`
+        }
+        table.innerText = tableBooks;
+    }
+    window.onload = function(){
+        showBooks();
+    }
     //genres
     function Genres() {
 
@@ -125,7 +146,9 @@
     <button onclick="booksReaded()">Books readed sorted by publish date</button>
 </div>
 <div id="content">
+<table id="container">
 
+</table>
 </div>
 </body>
 </html>

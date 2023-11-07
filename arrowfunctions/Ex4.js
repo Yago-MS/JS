@@ -1,9 +1,8 @@
-let nums = [1,2,3,4,5,6,7];
+let nums = [1, 2, 3, 4, 5, 6, 7];
 
-const initialValue=0;
+let average = nums.reduce(
+    (accumulator, currentValue) =>
+        accumulator + currentValue);
 
-const average = nums.reduce(
-    (accumulator, currentValue)=> accumulator + currentValue, initialValue);
 
-
-console.log(average/nums.length);
+console.log(average / nums.length);
