@@ -22,8 +22,7 @@
 
         let totalTime = (((hours * 60 + minutes) * 60) + seconds) * 1000;
         let timeAt = new Date(nowTime.getTime() + totalTime);
-        nowTime = new Date();
-        let timeUntil = timeAt - nowTime;
+        let timeUntil = timeAt - new Date().getTime();
 
         return convertMsToHHMMSS(timeUntil)
 
@@ -32,9 +31,8 @@
     const date = new Date();
     setInterval(() => {
         let count = document.getElementById("count");
-        let Strcount = timer(date, 0, 0, 10);
-        count.innerText = Strcount;
-        if (Strcount == "0:0:0") {
+        count.innerText = timer(date, 0, 0, 10);
+        if (count.innerText === "0:0:0") {
             myFunction();
         }
     }, 1000);

@@ -23,3 +23,23 @@ for (let i = 0; i < rows.length; i++) {
 for (let i = 0; i < table.length; i++) {
     console.log(table[i])
 }
+
+let CSV = [];
+
+for (let i = 0; i < row.length; i++) {
+    CSV.push([]);
+}
+
+for (let i = 0; i < rows.length; i++) {
+    let row = rows[i].split(",");
+    for (let j = 0; j < table[i].length; j++) {
+        if(row[j]!==undefined){
+            CSV[i][j] = row[j];
+        }else{
+            CSV[i][j]= null;
+        }
+
+    }
+}
+
+console.log(CSV)

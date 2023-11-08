@@ -10,22 +10,24 @@
     let books = {
         "books": [
             {
-                "title": "Hero of Ages",
-                "genre": "Fantasy",
-                "author": "Brandon Sanderson",
-                "pages": 600,
-                "published": new Date(2008, 9, 14).toDateString(),
-                "read": true,
-                "website": "https://cosmere.es/el-heroe-de-las-eras/"
+                id:1,
+                title: "Hero of Ages",
+                genre: "Fantasy",
+                author: "Brandon Sanderson",
+                pages: 600,
+                published: new Date(2008, 9, 14).toDateString(),
+                read: true,
+                website: "https://cosmere.es/el-heroe-de-las-eras/"
             },
             {
-                "title": "Well of Ascension",
-                "genre": "Fantasy",
-                "author": "Brandon Sanderson",
-                "pages": 700,
-                "published": new Date(2007, 8, 21).toDateString(),
-                "read": true,
-                "website": "https://cosmere.es/el-pozo-de-la-ascension/"
+                id:2,
+                title: "Well of Ascension",
+                genre: "Fantasy",
+                author: "Brandon Sanderson",
+                pages: 700,
+                published: new Date(2007, 8, 21).toDateString(),
+                read: true,
+                website: "https://cosmere.es/el-pozo-de-la-ascension/"
             }
         ]
     };
@@ -33,6 +35,25 @@
     let bookset = books.books;
 
 
+
+
+    function showBooks(){
+        let table = document.getElementById("container");
+        let tableBooks = "";
+        for (let book of bookset) {
+            tableBooks += `<tr data-id="${book.id}"><td>${book.title}</td>`
+            tableBooks += `<td>${book.author}</td>`
+            tableBooks += `<td>${book.genre}</td>`
+            tableBooks += `<td>${book.pages}</td>`
+            tableBooks += `<td>${book.published}</td>`
+            tableBooks += `<td>${book.read}</td>`
+            tableBooks += `<td>${book.website}</td></tr>`
+        }
+        table.innerText = tableBooks;
+    }
+    window.onload = function(){
+        showBooks();
+    }
     //genres
     function Genres() {
 
@@ -125,7 +146,9 @@
     <button onclick="booksReaded()">Books readed sorted by publish date</button>
 </div>
 <div id="content">
+<table id="container">
 
+</table>
 </div>
 </body>
 </html>
