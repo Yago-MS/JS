@@ -1,6 +1,7 @@
 let books = {
     "books": [
         {
+            id:1,
             title: "Hero of Ages",
             genre: "Fantasy",
             author: "Brandon Sanderson",
@@ -10,6 +11,7 @@ let books = {
             website: "https://cosmere.es/el-heroe-de-las-eras/"
         },
         {
+            id:2,
             title: "Well of Ascension",
             genre: "Fantasy",
             author: "Brandon Sanderson",
@@ -53,7 +55,7 @@ for (let i = 0; i < bookset.length; i++) {
 
 let authors = [];
 
-console.log("\n=== Unique Authors ===");
+console.log("\n=== Authors ===");
 for (let i = 0; i < bookset.length; i++) {
     if (!authors.includes(bookset[i].author)) {
         authors.push(bookset[i].author);
