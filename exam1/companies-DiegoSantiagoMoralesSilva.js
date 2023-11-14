@@ -543,10 +543,12 @@ function filteredCountries(option) {
     }
 }
 function showCompanies(){
-    let table = document.querySelectorAll("tr");
+    let table = document.querySelectorAll("tbody tr");
 
     for (const country of table) {
-        country.innerHTML += `<td></td>`
+        for (const continent of companies){
+
+        }
     }
 }
 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background Color</title>
+    <style>
+        body {
+            height: 98vh;
+        }
+    </style>
+</head>
+<body ondblclick="changeBackgroundColor()">
+<script>
+    function changeBackgroundColor() {
+        let randomR = Math.floor(Math.random() * 256);
+        let randomG = Math.floor(Math.random() * 256);
+        let randomB = Math.floor(Math.random() * 256);
+
+        let randomColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
+
+        document.body.style.backgroundColor = randomColor;
+    }
+</script>
+
+</body>
+</html>
