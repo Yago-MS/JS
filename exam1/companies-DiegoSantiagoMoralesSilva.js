@@ -538,15 +538,16 @@ function filteredCountries(option) {
             }
         }
         showCompanies();
-    }else{
+    } else {
         showCountries();
     }
 }
-function showCompanies(){
+
+function showCompanies() {
     let table = document.querySelectorAll("tbody tr");
 
     for (const country of table) {
-        for (const continent of companies){
+        for (const continent of companies) {
 
         }
     }

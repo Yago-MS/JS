@@ -7,6 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     trash.addEventListener("drop", function () {
         document.getElementById("papel").remove();
-        trash.setAttribute("src", "imgs/papeleraLlena.png"); // Añade la extensión del archivo si es necesario
+        trash.setAttribute("src", "imgs/papeleraLlena.png");
     });
 });

@@ -1,46 +1,44 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let clickTracker = {
-        clicks: [],
-        previousCell: null,
-        addClick: function (row, column, color) {
-            this.clicks.push({
-                row: row,
-                column: column,
-                color: color
-            });
-        },
-        displayClicks: function () {
-            console.log(this.clicks);
-        }
-    };
+    const table = document.getElementById('clickTable');
+    const targetInfo = document.getElementById('targetInfo');
+    let previousCell;
 
-    let table = document.getElementById('clickTable');
     table.addEventListener('click', function (event) {
-        let cell = event.target;
-        let row = cell.parentElement.rowIndex;
-        let column = cell.cellIndex;
+        const clickedCell = event.target;
+
+        let colored = document.getElementsByClassName('blue');
+         
+
+        if (clickedCell.tagName === 'TD') {
+            if (previousCell) {
+                previousCell.classList.remove('green', 'red', 'blue');
+            }
+
+            const isCtrlPressed = event.ctrlKey;
+            const isShiftPressed = event.shiftKey;
+
+            const row = clickedCell.parentElement.rowIndex;
+            const col = clickedCell.cellIndex;
+
+            const target = {
+                tag: clickedCell.tagName,
+                id: clickedCell.id,
+                textContent: clickedCell.textContent,
+                rowContent: Array.from(table.rows[row].cells).map(cell => cell.innerText),
+                colContent: Array.from(table.rows).map(row => row.cells[col].innerText),
+            };
+            Array.from(table.rows[row].cells).map(cell => cell.classList.add('blue'));
+            targetInfo.textContent = JSON.stringify(target);
+            if (isShiftPressed) {
+                clickedCell.classList.add('blue');
+            } else if (isCtrlPressed) {
+                clickedCell.classList.add('red');
+            } else {
+                clickedCell.classList.add('green');
+            }
 
 
-        if (clickTracker.previousCell) {
-            clickTracker.previousCell.style.backgroundColor = '';
+            previousCell = clickedCell;
         }
-
-
-        if (event.ctrlKey) {
-            cell.style.backgroundColor = 'red';
-            clickTracker.addClick(row, column, 'red');
-        } else if (event.shiftKey) {
-            cell.style.backgroundColor = 'blue';
-            clickTracker.addClick(row, column, 'blue');
-        } else {
-            cell.style.backgroundColor = 'green';
-            clickTracker.addClick(row, column, 'green');
-        }
-
-
-        clickTracker.previousCell = cell;
-
-
-        clickTracker.displayClicks();
     });
-})
+});

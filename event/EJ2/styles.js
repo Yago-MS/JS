@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let selectedStyle = styleSelect.value;
         console.log(selectedStyle)
-        document.body.classList.remove('light', 'dark', 'minimalist');
+        document.body.classList = "";
 
 
         document.body.classList.add(selectedStyle);

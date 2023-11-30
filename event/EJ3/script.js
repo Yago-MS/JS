@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let trackedElement = document.getElementById('element');
+    let trackedElement = document.querySelector("*");
 
     let mousePositionParagraph = document.getElementById('mousePosition');
 
@@ -13,11 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
         event.target.classList.toggle('highlight');
     });
 
-
     trackedElement.addEventListener('mouseout', function (event) {
 
         event.target.classList.toggle('highlight');
-
 
         mousePositionParagraph.textContent = '';
     });
