@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementById("submitButton").addEventListener("click", function () {
-        submitForm();
+        if(!submitForm()){
+            return false;
+        }
     });
 
     document.getElementById("clearButton").addEventListener("click", function () {
@@ -21,11 +23,6 @@ function previewImage(input) {
         preview.width = 250;
         const photoPreview = document.getElementById("photoPreview");
 
-        if (!photoPreview) {
-            console.error("Element with id 'photoPreview' not found.");
-            return;
-        }
-
         photoPreview.innerHTML = "";
         photoPreview.appendChild(preview);
     } else {
@@ -35,8 +32,8 @@ function previewImage(input) {
 
 
 function clearForm() {
-    const form = document.getElementById("myForm").reset();
-    const photoPreview = document.getElementById("photoPreview").innerHTML = "";
+    document.getElementById("myForm").reset();
+    document.getElementById("photoPreview").innerHTML = "";
 }
 
 function submitForm() {
@@ -52,16 +49,31 @@ function submitForm() {
     let photoInput = document.getElementById("photo");
     let photoPreview = document.getElementById("photoPreview");
 
-    if (!name || !email || !password || !angry || !sad || !happy || !ambivalent || !satisfaction || !comments || !photoInput || !photoPreview) {
-        alert("Please fill in all required fields and select at least one emotion.");
+    let allFilled = true;
+    let inputs  = document.querySelectorAll("input");
+    for (let input of inputs) {
+        if(!input.value){
+            input.style.border = "1px solid red";
+            console.log(input)
+            allFilled =  false;
+        }
+    }
+    if(!allFilled){
+        clearForm();
+        return false;
     }
 
+    /*if (!name || !email || !password || !angry || !sad || !happy || !ambivalent || !satisfaction || !comments || !photoInput || !photoPreview) {
+        alert("Please fill in all required fields and select at least one emotion.");
+    }*/
+
     let file = photoInput.files[0];
-    if (!file) {
+    /*if (!file) {
         alert("Please select a bio photo.");
-    }
+    }*/
     let tableBody = document.getElementById("tableBody");
     let newRow = tableBody.insertRow(tableBody.rows.length);
+
     let idx = 0;
     newRow.insertCell(idx++).innerHTML = name.value;
     newRow.insertCell(idx++).innerHTML = email.value;
@@ -71,9 +83,9 @@ function submitForm() {
     newRow.cells.item(idx).innerHTML += happy.checked ? "Happy " : "";
     newRow.cells.item(idx++).innerHTML += ambivalent.checked ? "Ambivalent " : "";
     newRow.insertCell(idx++).innerHTML = satisfaction.value;
-    newRow.insertCell(idx).innerHTML = comments.value;
+    newRow.insertCell(idx++).innerHTML = comments.value;
 
-    let bioPhotoCell = newRow.insertCell(6);
+    let bioPhotoCell = newRow.insertCell(idx);
     const thumbnail = document.createElement("img");
     thumbnail.src = URL.createObjectURL(file);
     thumbnail.width = 250;
