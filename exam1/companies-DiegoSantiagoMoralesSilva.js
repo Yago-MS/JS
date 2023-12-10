@@ -498,6 +498,7 @@ const companies = [
         }
     ]
 ;
+
 let objectCountries = [];
 for (let i = 0; i < companies.length; i++) {
     objectCountries.push(companies[i]);
@@ -506,10 +507,10 @@ console.log(objectCountries)
 let allCountries = [];
 for (const continent of companies) {
     for (const country of continent.countries) {
-        allCountries.push(country.name);
+        allCountries.push(country);
     }
 }
-allCountries.sort((a, b) => a.localeCompare(b));
+allCountries.sort((a, b) => a.name.localeCompare(b.name));
 
 
 function showCountries() {
@@ -519,10 +520,13 @@ function showCountries() {
     let content = "";
 
     for (const countryName of allCountries) {
-        content += `<tr data-name="${countryName}"><td>${countryName}</td></tr>`
+        content += `<tr data-name="${countryName.name}"><td>${countryName.name}</td></tr>`
     }
-    showCompanies();
+
+
     tbody.innerHTML = content;
+    showCompanies();
+    printCompanies();
 }
 
 function filteredCountries(option) {
@@ -537,21 +541,94 @@ function filteredCountries(option) {
                 }
             }
         }
-        showCompanies();
+        showCompanies(option);
+        printCompanies(option)
     } else {
         showCountries();
     }
 }
 
-function showCompanies() {
+function showCompanies(option = "") {
     let table = document.querySelectorAll("tbody tr");
 
-    for (const country of table) {
-        for (const continent of companies) {
-
+    if (option === "") {
+        for (const country of table) {
+            for (const continent of companies) {
+                for (const countries of continent.countries) {
+                    if (countries.name === country.getAttribute("data-name")) {
+                        let count = 0;
+                        let td = document.createElement("td");
+                        td.innerText = countries.companies.length
+                        country.appendChild(td);
+                    }
+                }
+            }
+        }
+    } else { //Refactorizado para no recorrer todo el json en consultas de continentes
+        for (const country of table) {
+            for (const continent of companies) {
+                if (continent.continent === option) {
+                    for (const countries of continent.countries) {
+                        if (countries.name === country.getAttribute("data-name")) {
+                            let count = 0;
+                            let td = document.createElement("td");
+                            td.innerText = countries.companies.length
+                            country.appendChild(td);
+                        }
+                    }
+                }
+            }
         }
     }
 }
+function printCompanies(option = "") {
+    let table = document.querySelectorAll("tbody tr");
+
+    if (option === "") {
+        for (const country of table) {
+            for (const continent of companies) {
+                for (const countries of continent.countries) {
+                    if (countries.name === country.getAttribute("data-name")) {
+                        let count = 0;
+                        let td = document.createElement("td");
+                        for (const company of countries.companies) {
+                            console.log(company)
+                            for (const companyName in company) {
+                                console.log(companyName)
+                                td.innerHTML += `${companyName} <br> `
+                            }
+
+                        }
+
+
+                        country.appendChild(td);
+                    }
+                }
+            }
+        }
+    } else { //Refactorizado para no recorrer todo el json en consultas de continentes
+        for (const country of table) {
+            for (const continent of companies) {
+                if (continent.continent === option) {
+                    for (const countries of continent.countries) {
+                        if (countries.name === country.getAttribute("data-name")) {
+                            let count = 0;
+                            let td = document.createElement("td");
+                            for (const company of countries.companies) {
+                                for (const companyName in company) {
+                                    td.innerHTML += `${companyName} <br> `
+                                }
+
+                            }
+                            country.appendChild(td);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 window.onload = function () {
     showCountries();
