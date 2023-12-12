@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c1670a9-76fd-40a9-859f-9a873cd3c064" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../FinalExam/.idea/FinalExam.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FinalExam/index1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FinalExam/index2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FinalExam/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FinalExam/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../events2/EJ1/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../events2/EJ1/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DragDropEvents/imgs/papel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DragDropEvents/imgs/papeleraLlena.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DragDropEvents/imgs/papeleraVacia.png" beforeDir="false" />
-    </list>
+    <list default="true" id="9c1670a9-76fd-40a9-859f-9a873cd3c064" name="Changes" comment="pre-exam" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,11 +62,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702395585040</updated>
-      <workItem from="1702395586036" duration="1367000" />
+      <workItem from="1702395586036" duration="1419000" />
     </task>
+    <task id="LOCAL-00001" summary="pre-exam">
+      <option name="closed" value="true" />
+      <created>1702396992284</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702396992284</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="pre-exam" />
+    <option name="LAST_COMMIT_MESSAGE" value="pre-exam" />
   </component>
 </project>
