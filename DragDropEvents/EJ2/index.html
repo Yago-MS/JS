@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+    <style>
+        #lista{
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <div>
+        <h1>
+        Articulos en venta:
+    </h1>
+    <div>
+        <img src="imgs/papel.PNG" width="150px" height="150px" draggable="true" ondragstart="drag(event)">
+        <img src="imgs/papeleraVacia.PNG" width="150px" height="150px" draggable="true" ondragstart="drag(event)">
+    </div>
+        
+    </div>
+
+    <div>
+        <br>
+        <br>
+        <br>
+        <img src="imgs/papeleraLlena.PNG" width="50px" height="50px" ondrop="drop(event)" ondragover="allowDrop(event)" draggable="false">
+    </div>
+
+    <div>
+        <h1>
+            Productos en cesta:
+        </h1>
+
+        <div id="lista">
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

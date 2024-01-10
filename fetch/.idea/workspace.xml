@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f3115507-5487-4d6e-a5d8-eeb65a3a3c93" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../FinalExam/countries/all_countries.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FinalExam/pizza/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalExam/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalExam/countries/countriesDiegoSantiagoMorales.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalExam/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalExam/pizza/pizza-DiegoSantiagoMorales.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FinalExam/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/../FinalExam/countries/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exam1/companies-DiegoSantiagoMoralesSilva.js" beforeDir="false" afterPath="$PROJECT_DIR$/../exam1/companies-DiegoSantiagoMoralesSilva.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/fetch.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2YqBTuFnGV9K4qnOsbwrPiloXtE" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.18.2&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.18.2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Propietario/WebstormProjects/FinalExam&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Propietario\WebstormProjects\fetch\github" />
+      <recent name="C:\Users\Propietario\WebstormProjects\fetch\fetchLocal" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3115507-5487-4d6e-a5d8-eeb65a3a3c93" name="Changes" comment="" />
+      <created>1701243240210</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701243240210</updated>
+      <workItem from="1701243241240" duration="4667000" />
+      <workItem from="1701259666727" duration="2196000" />
+      <workItem from="1701341304735" duration="10000" />
+      <workItem from="1701415617202" duration="52000" />
+      <workItem from="1702387197349" duration="1119000" />
+      <workItem from="1702388338043" duration="8000" />
+      <workItem from="1702451701379" duration="166000" />
+      <workItem from="1702453240067" duration="20000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

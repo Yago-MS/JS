@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row" style="background-color: #27CDF2">
+        <span>Countries</span>
+    </div>
+    <div class="row pb-2 pt-2">
+        <div class="col-xl-4">
+            <label>en</label><input type="text" readonly id="name_en">
+        </div>
+        <div class="col-xl-4">
+            <label>sp</label><input type="text" id="name_es">
+        </div>
+        <div class="col-xl-4">
+            <label>gr</label><input type="text" id="name_gr">
+        </div>
+    </div>
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>English</th>
+        <th>Spanish</th>
+        <th>German</th>
+    </tr>
+    </thead>
+    <tbody id="tbody">
+
+    </tbody>
+    <script type="module" src="script.js"></script>
+</table>
+</div>
+</body>
+</html>

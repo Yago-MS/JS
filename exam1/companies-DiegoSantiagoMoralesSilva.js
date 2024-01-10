@@ -581,6 +581,7 @@ function showCompanies(option = "") {
         }
     }
 }
+
 function printCompanies(option = "") {
     let table = document.querySelectorAll("tbody tr");
 
