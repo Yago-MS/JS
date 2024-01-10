@@ -1,7 +1,11 @@
+let form = document.querySelector(".form");
+let table = document.querySelector("#tbody");
+let contacts = [];
+
 form.addEventListener("submit", function (event) {
     event.preventDefault();
-    let firstName = document.querySelector("#name");
-    let lastName = document.querySelector("#surname");
+    let firstName = document.querySelector("#firstName");
+    let lastName = document.querySelector("#lastName");
     let birthday = document.querySelector("#birthday");
     let gender = document.querySelector("#gender");
     let email = document.querySelector("#email");
@@ -43,10 +47,18 @@ form.addEventListener("submit", function (event) {
             phone: phone.value,
         };
         contacts.push(contact);
-        let tbody = document.querySelector("#tbody")
-        for (const contact of contacts) {
-            //let
-        }
-    }
 
-})
+        let newRow = document.createElement("tr");
+        newRow.setAttribute("class", "bg-gray-100 border-b");
+
+        for (let field in contact) {
+            let newCell = document.createElement("td");
+            newCell.setAttribute("class", "text-sm text-green-700 font-medium px-6 py-4 whitespace-nowrap");
+            newCell.textContent = contact[field];
+            newRow.appendChild(newCell);
+        }
+        table.appendChild(newRow);
+
+        form.reset();
+    }
+});
