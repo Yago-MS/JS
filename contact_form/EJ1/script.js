@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 !validator.isEmpty(gender.value) &&
                 validator.isEmail(email.value) &&
                 validator.isMobilePhone(phone.value)) {
-                console.log("todo cul")
+                console.log("todo cool")
             }
         }
 
