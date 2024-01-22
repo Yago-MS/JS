@@ -11,6 +11,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xl-6">
+            <form>
                 <div class="form-group">
                     <label for="name">First name</label>
                     <input type="text" class="form-control" id="name">
@@ -37,6 +38,7 @@
                 </div>
                 <br>
                 <button id="submit" class="btn btn-primary">Insert</button>
+            </form>
         </div>
         <div class="col-xl-6">
             <table class="table">
@@ -50,14 +52,16 @@
                     <th scope="col">Phone number</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbody">
                 </tbody>
             </table>
         </div>
     </div>
 </div>
-<script src="script.js"></script>
 <script src="../node_modules/validator/validator.js"></script>
 <script src="../node_modules/air-datepicker/air-datepicker.js"></script>
+<script>let exports = {}</script>
+<script src="../node_modules/air-datepicker/locale/es.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
