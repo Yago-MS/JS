@@ -1,3 +1,5 @@
+import validator from "validator";
+import datos from '../data/db/datos.json' assert {type:'json'};
 interface person {
     firstName: string;
     lastName: string;
@@ -20,6 +22,21 @@ let contacts: person[] = [];
             let phone = document.querySelector("#phone") as HTMLInputElement;
 
             let errors: string[] = [];
+            if (validator.isNumeric(firstName.value) || validator.isNumeric(lastName.value)) {
+                errors.push('Nombre o Apellido inválido');
+            }
+            console.log(birthday.value)
+            if (!validator.isDate(birthday.value)) {
+                errors.push('Fecha de Nacimiento inválida');
+            }
+
+            if (!validator.isEmail(email.value)) {
+                errors.push('Email inválido');
+            }
+
+            if (!validator.isMobilePhone(phone.value)) {
+                errors.push('Número de Teléfono inválido');
+            }
             contacts.forEach((contact) => {
                 if (contact["email"] == email.value || contact["phone"] == phone.value) {
                     errors.push('Email o Número de Teléfono ya existen');
