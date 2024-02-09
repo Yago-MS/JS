@@ -6,8 +6,7 @@ import {NgClass} from "@angular/common";
   selector: 'app-ex06',
   standalone: true,
   imports: [
-    FormsModule,
-    NgClass
+    FormsModule
   ],
   templateUrl: './ex06.component.html',
   styleUrl: './ex06.component.css'
