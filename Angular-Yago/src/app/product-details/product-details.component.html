@@ -5,6 +5,6 @@
     <h4>{{ product.price | currency }}</h4>
     <p>{{ product.description }}</p>
     <p>provider/s:</p>
-    <p>{{product.provider.name}}</p>
+    <a [routerLink]="['/provider', product.provider.id]">{{product.provider.name}}</a>
     <button type="button" (click)="addToCart(product)">Buy</button>
 </div>

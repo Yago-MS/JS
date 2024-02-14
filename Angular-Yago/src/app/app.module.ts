@@ -22,7 +22,7 @@ import {ProviderDetailsComponent} from "./provider-details/provider-details.comp
             {path: 'products/:productId', component: ProductDetailsComponent},
             {path: 'cart', component: CartComponent},
             {path: 'shipping', component: ShippingComponent},
-            {path: 'provider/:prodiverId', component:ProviderDetailsComponent}
+            {path: 'provider/:providerId', component:ProviderDetailsComponent}
         ])
     ],
     declarations: [

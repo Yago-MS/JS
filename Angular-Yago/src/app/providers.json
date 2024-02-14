@@ -1,7 +1,6 @@
 {
-  "providers": [
-    {
-      "provider": {
+  "Providers": [
+      {
         "id": 1,
         "nombre": "prov1",
         "pais": "Portugal",
@@ -38,6 +37,5 @@
           }
         ]
       }
-    }
   ]
 }

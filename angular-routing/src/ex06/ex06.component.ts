@@ -25,7 +25,14 @@ export class Ex06Component {
     this.celcius = 0;
     this.fahrenheit = 0;
   }
-
+  validate(e:KeyboardEvent){
+    console.log(this.celcius)
+    if(this.celcius.toString().match(/[^0-9]/g) && e.key != "Backspace"){
+      e.preventDefault();
+    }else{
+      this.converToFahrenheit()
+    }
+  }
   convertToCelcius() {
     this.celcius = (this.fahrenheit - 32) * 5 / 9;
   }

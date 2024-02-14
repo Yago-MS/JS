@@ -2,9 +2,9 @@
 <h2>Fahrenheit/Celsius conversion</h2>
 Celcius:
 
-<input  [(ngModel)]="celcius" (keyup)="converToFahrenheit()" required>
+<input id="celcius" [(ngModel)]="celcius" (keyup)="validate($event)" required>
 <br>
 Fahrenheit:
-<input [(ngModel)]="fahrenheit" (keyup)="convertToCelcius()" required>
+<input id="fahrenheit" [(ngModel)]="fahrenheit" (keyup)="convertToCelcius()" required>
 <br>
 <button (click)="clear()">Reset</button>
