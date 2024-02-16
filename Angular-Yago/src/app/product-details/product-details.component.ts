@@ -1,11 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, RouterLink} from '@angular/router';
 
 import { Product, products } from '../products';
 import { CartService } from '../cart.service';
+import {CommonModule, CurrencyPipe} from "@angular/common";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 @Component({
   selector: 'app-product-details',
-  standalone: false,
+  standalone: true,
+  imports: [
+    RouterLink,
+    CurrencyPipe,
+    CommonModule
+  ],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
 })
@@ -19,7 +26,7 @@ export class ProductDetailsComponent implements OnInit {
   ) { }
 
 
-  addToCart(product: Product) {
+  addToCart(product: Product | undefined) {
     this.cartService.addToCart(product);
     window.alert('Your product has been added to the cart!');
   }

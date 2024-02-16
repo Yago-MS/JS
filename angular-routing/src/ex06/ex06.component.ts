@@ -26,11 +26,8 @@ export class Ex06Component {
     this.fahrenheit = 0;
   }
   validate(e:KeyboardEvent){
-    console.log(this.celcius)
-    if(this.celcius.toString().match(/[^0-9]/g) && e.key != "Backspace"){
+    if(isNaN(Number(e.key))){
       e.preventDefault();
-    }else{
-      this.converToFahrenheit()
     }
   }
   convertToCelcius() {
@@ -40,6 +37,5 @@ export class Ex06Component {
   converToFahrenheit() {
     this.fahrenheit = this.celcius * 9 / 5 + 32;
   }
-
   protected readonly isNaN = isNaN;
 }

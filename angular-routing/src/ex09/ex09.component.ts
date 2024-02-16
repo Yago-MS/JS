@@ -12,7 +12,7 @@ import {NgForOf} from "@angular/common";
   templateUrl: './ex09.component.html'
 })
 export class Ex09Component {
-//  employees: Employee[] = [];
+ //employees: Employee[] = [];
 
   constructor() { }
 

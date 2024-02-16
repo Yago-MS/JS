@@ -1,11 +1,18 @@
 import { Component } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
-import {Providers} from "../providers.json";
+import {ActivatedRoute, RouterLink} from "@angular/router";
+import {Providers} from "../../assets/providers.json";
 import {Provider} from "../providers";
+import {CommonModule, CurrencyPipe} from "@angular/common";
+import {HttpClientModule} from "@angular/common/http";
 @Component({
   selector: 'app-provider-details',
-  standalone: false,
+  standalone: true,
   templateUrl: './provider-details.component.html',
+  imports: [
+    RouterLink,
+    CurrencyPipe,
+      CommonModule,
+  ],
   styleUrl: './provider-details.component.css'
 })
 export class ProviderDetailsComponent {

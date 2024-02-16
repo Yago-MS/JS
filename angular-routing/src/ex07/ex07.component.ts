@@ -17,6 +17,9 @@ export class Ex07Component {
 
   ngOnInit(): void {
     this.numbers = [1, 5, 8, 24, 32, 11, 55];
+    this.numbers.sort((a, b)=> a-b);
     this.fruits = ["pear", "apple", "mango", "watermelon", "kiwi"];
+    this.fruits.sort()
+    this.fruits = this.fruits.map(str => str.toLowerCase());
   }
 }

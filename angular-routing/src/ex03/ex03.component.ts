@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import {FormsModule} from "@angular/forms";
+import {NgClass} from "@angular/common";
 
 @Component({
   selector: 'app-ex03',
   standalone: true,
-  imports: [],
+  imports: [
+    NgClass
+  ],
   templateUrl: './ex03.component.html',
   styleUrl: './ex03.component.css'
 })

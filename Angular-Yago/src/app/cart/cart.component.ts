@@ -1,8 +1,15 @@
 import { Component } from '@angular/core';
 import { CartService } from '../cart.service';
-import { FormBuilder } from '@angular/forms';
+import {FormBuilder, ReactiveFormsModule} from '@angular/forms';
+import {CommonModule, CurrencyPipe} from "@angular/common";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 @Component({
   selector: 'app-cart',
+  standalone: true,
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+  ],
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
