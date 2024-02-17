@@ -2,20 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     setLastSubmit();
     let fileReader = new FileReader();
     fileReader.onload = ev => {
-        imageToCookies(ev.target.result)
+        localStorage.setItem("image", ev.target.result);
         setLastSubmit();
     }
-
-    let input = document.getElementById("submitFile");
-    input.addEventListener("change", function () {
-        previewImage(input);
-    });
-    document.getElementById("submit").addEventListener("click", () => {
-        if (input.files[0]) {
-            fileReader.readAsDataURL(input.files[0])
-        }
-
-    });
 
     function previewImage(input) {
         const file = input.files[0];
@@ -32,11 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-
-    function imageToCookies(image) {
-        localStorage.setItem("image", image);
-    }
-
     function setLastSubmit() {
         if (localStorage.getItem("image")) {
             if (!document.getElementById("submited")) {
@@ -50,7 +34,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 img.src = localStorage.getItem("image");
             }
         }
-
-
     }
+
+    let input = document.getElementById("submitFile");
+    input.addEventListener("change", function () {
+        previewImage(input);
+    });
+    document.getElementById("submit").addEventListener("click", () => {
+        if (input.files[0]) {
+            fileReader.readAsDataURL(input.files[0])
+        }
+
+    });
 })
