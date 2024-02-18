@@ -19,7 +19,7 @@ export class Ex09Component {
   sortEmployees(type:string){
     if(type=="name")
       this.employees.sort( (a, b) => {return a.name> b.name ? 1 : a.name == b.name ? 0 : -1});
-    if(type="salary")
+    if(type=="salary")
       this.employees.sort((a, b) => {return a.salary -b.salary});
     else
       this.employees.sort( (a, b) => {return a.position> b.position ? 1 : a.position == b.position ? 0 : -1});
