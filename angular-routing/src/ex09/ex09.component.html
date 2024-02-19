@@ -11,7 +11,7 @@
     <td>{{ e.salary }}</td>
   </tr>
 
-  <button class="btn btn-primary m-1">sort by name</button>
-  <button class="btn btn-primary m-1">sort by position</button>
-  <button class="btn btn-primary m-1" (onclick)="" >sort by salary</button>
+  <button class="btn btn-primary m-1" (click)="sortEmployees('name')">sort by name</button>
+  <button class="btn btn-primary m-1" (click)="sortEmployees('position')">sort by position</button>
+  <button class="btn btn-primary m-1" (click)="sortEmployees('salary')" >sort by salary</button>
 </table>

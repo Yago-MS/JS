@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
-import {RouterLink} from "@angular/router";
-import {HttpClientModule} from "@angular/common/http";
 
 @Component({
   selector: 'app-top-bar',
-  standalone: true,
-  imports: [
-    RouterLink,
-  ],
   templateUrl: './top-bar.component.html',
   styleUrls: ['./top-bar.component.css']
 })
