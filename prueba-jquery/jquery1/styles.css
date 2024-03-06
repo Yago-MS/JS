@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+#container{
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: #cde5e5;
+}
+form * {
+    margin: 0.3em;
+}
+form input, textarea, select{
+    border: deepskyblue solid 1px;
+    border-radius: 0.4em;
+    background-color: aliceblue;
+    padding: 0.1em;
+}
+
+table, #tasks, #tasks * {
+    min-width: 100%;
+    text-align: center;
+}
+#forms{
+    display: flex;
+    justify-content: center;
+}
+.completed-true{
+    background-color: aquamarine;
+}
+.completed-false{
+    background-color: #fd9baf;
+}
+#delButton{
+    text-align: center;
+}
+#deleteAll{
+    background-color: red;
+    border-radius: 15px;
+    text-align: center;
+}
+.preTask{
+    opacity: 0;
+}

@@ -3,12 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>jquery</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 </head>
 <body>
-<input id="datepicker" class="input">
-<table class="table" id="tasks">
-    <td><th>name</th><th>description</th><th>priority</th><th>creation</th><th></th></td>
-</table>
+<div id="container">
+    <div id="forms">
+        <div id="create">
+            <h2>Tasks</h2>
+            <form>
+                <label>Name</label>
+                <input id="name" type="text">
+                <label>Description:</label>
+                <input id="description" type="text">
+                <label>Priority:</label>
+                <select id="priority">
+                    <option value="low">low</option>
+                    <option selected value="normal">normal</option>
+                    <option value="high">high</option>
+                </select>
+                <input type="text" id="completionDate" >
+                <input id="createBtn" type="submit" value="submit">
+            </form>
+        </div>
+        <div id="filter">
+            <h2>Filter</h2>
+            <form>
+                <label>By name...</label>
+                <input id="inputFilter" type="text">
+                <input id="submitFilter" type="submit" value="submit">
+            </form>
+        </div>
+    </div>
+    <table class="table" id="table">
+        <thead>
+        <tr>
+            <th>name</th>
+            <th>description</th>
+            <th>priority</th>
+            <th>creation</th>
+            <th>completion</th>
+            <th>completed</th>
+            <th>delete</th>
+        </tr>
+        </thead>
+        <tbody id="tasks">
+        </tbody>
+    </table>
+    <div id="delButton"><p id="pending"></p> <button id="deleteAll">DELETE ALL TASKS</button></div>
+</div>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script src="script.js"></script>
