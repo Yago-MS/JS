@@ -7,7 +7,6 @@ $(document).ready(function () {
         }
         return cont;
     }
-
     function loadTable(name = "") {
         let pendingTasks = 0;
         $("#tasks").empty();
@@ -16,9 +15,11 @@ $(document).ready(function () {
             let task = localStorage.getItem(taskKeys[i])
             task = task.trim()
             let taskData = task.split(' ');
-            if (taskData[0].includes(name) || taskData[0] === name) {
+            if (taskData[0].replace(/[-]/g, " ").includes(name) || taskData[0].replace(/[-]/g, " ") === name) {
                 $("#tasks").append(`<tr class="completed-${taskData[4]}" id="${taskKeys[i]}"></tr>`)
-                names.push(taskData[0]);
+                if(!names.includes(taskData[0].replace(/[-]/g, " "))){
+                    names.push(taskData[0].replace(/[-]/g, " "));
+                }
                 for (const taskDatum of taskData) {
                     if (taskDatum !== "true" && taskDatum !== "false") {
                         if (taskDatum === taskData[2]) {
@@ -56,8 +57,9 @@ $(document).ready(function () {
                     } else {
                         taskData[4] = "true"
                     }
+                    console.log(taskData)
                     localStorage.setItem(`${ev.target.parentElement.parentElement.id}`, `${taskData[0]} ${taskData[1]} ${taskData[2]} ${taskData[3]} ${taskData[4]} ${taskData[5]}`)
-                    window.location.reload()
+                    //window.location.reload()
                 })
             }
         }
